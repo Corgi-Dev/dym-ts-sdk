@@ -37,7 +37,6 @@ class PublicKey {
         return new PublicKey(publicKeyByte, type);
     }
     toPubKeyBytes() {
-        console.log("pubkey type: ", this.type);
         return this.key;
     }
     toBase64() {

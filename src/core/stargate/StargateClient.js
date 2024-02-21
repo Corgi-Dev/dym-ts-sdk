@@ -18,7 +18,6 @@ class StargateClient extends stargate_1.StargateClient {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const chainId = yield this.getChainId();
-                console.log("chainid: ", chainId);
                 const isInjective = (0, check_1.startWithChainIdPrefix)(chainId);
                 const account = yield this.forceGetQueryClient().auth.account(searchAddress);
                 if (!account) {
