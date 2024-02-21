@@ -15,7 +15,7 @@ import {
   Registry,
   TxBodyEncodeObject,
 } from "@cosmjs/proto-signing";
-import { HttpEndpoint, Tendermint37Client } from "@cosmjs/tendermint-rpc";
+import { HttpEndpoint, Tendermint37Client } from "../../../tendermint-rpc/build";
 import { assert, assertDefined } from "@cosmjs/utils";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 import { MsgWithdrawDelegatorReward } from "cosmjs-types/cosmos/distribution/v1beta1/tx";
