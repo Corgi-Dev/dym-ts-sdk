@@ -1,3 +1,8 @@
+// import {
+//   encodeSecp256k1Pubkey,
+//   makeSignDoc as makeSignDocAmino,
+//   StdFee,
+// } from "@cosmjs/amino";
 import { fromBase64 } from "@cosmjs/encoding";
 import { Int53, Uint53 } from "@cosmjs/math";
 import {
