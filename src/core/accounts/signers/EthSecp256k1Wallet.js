@@ -10,7 +10,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EthSecp256k1Wallet = void 0;
-const amino_1 = require("@cosmjs/amino");
 const PrivateKey_1 = require("../PrivateKey");
 const PublicKey_1 = require("../PublicKey");
 const __1 = require("../../..");
