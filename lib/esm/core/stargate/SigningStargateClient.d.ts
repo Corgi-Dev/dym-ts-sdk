@@ -1,6 +1,6 @@
 import { StdFee } from "@cosmjs/amino";
 import { EncodeObject, OfflineSigner, Registry } from "@cosmjs/proto-signing";
-import { HttpEndpoint } from "@cosmjs/tendermint-rpc";
+import { HttpEndpoint } from "../../tendermint-rpc/build";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 import { TxRaw } from "cosmjs-types/cosmos/tx/v1beta1/tx";
 import { Height } from "cosmjs-types/ibc/core/client/v1/client";

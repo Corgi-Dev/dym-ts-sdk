@@ -8,7 +8,7 @@ import {
   CampaignUser,
   GuildCampaignSummary,
 } from "../types/campaign";
-import { GrpcCoin } from "../../../types";
+import { GrpcCoin } from "../../../types/index";
 
 export class IndexerCampaignTransformer {
   static GrpcCoinToCoin(coin: GrpcCoin): Coin {

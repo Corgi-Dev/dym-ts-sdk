@@ -1,12 +1,13 @@
 import BigNumber from "bignumber.js";
 import {
-  DEFAULT_STD_FEE,
-  DEFAULT_GAS_LIMIT,
-  DEFAULT_GAS_PRICE,
   AddressPrefix,
 } from "../../../../";
 import { BigNumberInBase, BigNumberInWei } from "@injectivelabs/utils";
 
+import { DEFAULT_STD_FEE } from "@injectivelabs/utils";
+export declare const DEFAULT_GAS_LIMIT = 250000;
+export declare const DEFAULT_IBC_GAS_LIMIT = 250000;
+export declare const DEFAULT_GAS_PRICE = 20000000000;
 export const getStdFeeForToken = (
   token: {
     denom: string;

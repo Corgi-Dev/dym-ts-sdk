@@ -1,4 +1,4 @@
-import { bech32 } from "bech32";
+import { bech32 } from "bech32-2";
 import { Address } from "ethereumjs-util";
 import keccak256 from "keccak256";
 import { AddressPrefix } from "..";

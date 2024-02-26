@@ -1,7 +1,7 @@
 import { Coin } from "@injectivelabs/ts-types";
 import { InjectiveCampaignRpc } from "@injectivelabs/indexer-proto-ts";
 import { Guild, Campaign, GuildMember, CampaignUser, GuildCampaignSummary } from "../types/campaign";
-import { GrpcCoin } from "../../../types";
+import { GrpcCoin } from "../../../types/index";
 export declare class IndexerCampaignTransformer {
     static GrpcCoinToCoin(coin: GrpcCoin): Coin;
     static GrpcCampaignUserToCampaignUser(campaignUser: InjectiveCampaignRpc.CampaignUser): CampaignUser;
@@ -12,7 +12,7 @@ export declare class IndexerCampaignTransformer {
     static CampaignResponseToCampaign(response: InjectiveCampaignRpc.RankingResponse): {
         campaign: Campaign | undefined;
         users: CampaignUser[];
-        paging: import("../../../types").ExchangePagination;
+        paging: import("../../../types/pagination").ExchangePagination;
     };
     static RoundsResponseToRounds(response: InjectiveCampaignRpc.CampaignsResponse): {
         campaigns: Campaign[];
@@ -21,7 +21,7 @@ export declare class IndexerCampaignTransformer {
     };
     static GuildsResponseToGuilds(response: InjectiveCampaignRpc.ListGuildsResponse): {
         guilds: Guild[];
-        paging: import("../../../types").ExchangePagination;
+        paging: import("../../../types/pagination").ExchangePagination;
         updatedAt: number;
         summary: GuildCampaignSummary | undefined;
     };
@@ -30,7 +30,7 @@ export declare class IndexerCampaignTransformer {
     };
     static GuildMembersResponseToGuildMembers(response: InjectiveCampaignRpc.ListGuildMembersResponse): {
         members: GuildMember[];
-        paging: import("../../../types").ExchangePagination;
+        paging: import("../../../types/pagination").ExchangePagination;
         guildInfo: Guild | undefined;
     };
 }

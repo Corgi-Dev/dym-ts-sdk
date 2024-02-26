@@ -26,7 +26,7 @@ import {
   MitoIDOSubscriptionActivity,
   MitoMissionLeaderboardEntry,
 } from "../types/mito";
-import { GrpcCoin } from "../../../types";
+import { GrpcCoin } from "../../../types/index";
 
 /**
  * @category Indexer Grpc Transformer

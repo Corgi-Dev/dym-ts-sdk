@@ -1,5 +1,5 @@
 import { BaseWasmQuery } from '../../BaseWasmQuery'
-import { toBase64 } from '../../../../utils'
+import { toBase64 } from '../../../../utils/index'
 
 export declare namespace QueryInputQuantityArg {
   export interface Params {

@@ -1,7 +1,7 @@
 import { Coin } from "@injectivelabs/ts-types";
 import { MitoApi } from "@injectivelabs/mito-proto-ts";
 import { MitoIDO, MitoVault, MitoHolders, MitoChanges, MitoMission, MitoTransfer, MitoTokenInfo, MitoPortfolio, MitoPagination, MitoIDOProgress, MitoLeaderboard, MitoDenomBalance, MitoSubscription, MitoIDOSubscriber, MitoPriceSnapshot, MitoClaimReference, MitoIDOSubscription, MitoWhitelistAccount, MitoLeaderboardEpoch, MitoSubaccountBalance, MitoMissionLeaderboard, MitoStakeToSubscription, MitoIDOSubscriptionActivity, MitoMissionLeaderboardEntry } from "../types/mito";
-import { GrpcCoin } from "../../../types";
+import { GrpcCoin } from "../../../types/index";
 /**
  * @category Indexer Grpc Transformer
  */

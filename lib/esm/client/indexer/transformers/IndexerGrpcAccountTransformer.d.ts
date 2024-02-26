@@ -1,5 +1,5 @@
 import { Coin } from '@injectivelabs/ts-types';
-import { GrpcCoin } from '../../../types';
+import { GrpcCoin } from '../../../types/index';
 import { TradingReward, AccountPortfolio, SubaccountBalance, SubaccountDeposit, GrpcTradingReward, SubaccountTransfer, SubaccountPortfolio, GrpcAccountPortfolio, GrpcSubaccountBalance, GrpcSubaccountDeposit, GrpcSubaccountPortfolio, GrpcSubaccountBalanceTransfer } from '../types/account';
 import { InjectiveAccountRpc } from '@injectivelabs/indexer-proto-ts';
 /**
@@ -26,7 +26,7 @@ export declare class IndexerGrpcAccountTransformer {
     static grpcTradingRewardToTradingReward(reward: GrpcTradingReward): TradingReward;
     static transferHistoryResponseToTransferHistory(response: InjectiveAccountRpc.SubaccountHistoryResponse): {
         transfers: SubaccountTransfer[];
-        pagination: import("../../../types").ExchangePagination;
+        pagination: import("../../../types/pagination").ExchangePagination;
     };
     static grpcTransferHistoryToTransferHistory(transfers: GrpcSubaccountBalanceTransfer[]): SubaccountTransfer[];
 }

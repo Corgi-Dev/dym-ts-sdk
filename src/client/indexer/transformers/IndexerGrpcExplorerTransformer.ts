@@ -21,7 +21,7 @@ import {
   GrpcPeggyWithdrawalTx,
   IndexerStreamTransaction,
 } from '../types/explorer'
-import { grpcPagingToPaging } from '../../../utils'
+import { grpcPagingToPaging } from '../../../utils/index'
 import { InjectiveExplorerRpc } from '@injectivelabs/indexer-proto-ts'
 
 /**

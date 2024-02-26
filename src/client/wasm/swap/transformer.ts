@@ -1,6 +1,6 @@
 import { QueryRouteResponse, QueryQuantityAndFeesResponse } from './types'
 import { WasmContractQueryResponse } from '../types'
-import { toUtf8 } from '../../../utils'
+import { toUtf8 } from '../../../utils/index'
 
 export class SwapQueryTransformer {
   static contractRouteResponseToContractRoute(

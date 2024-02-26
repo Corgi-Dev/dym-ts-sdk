@@ -1,4 +1,3 @@
-export declare const BECH32_PUBKEY_ACC_PREFIX = "injpub";
 export declare const BECH32_PUBKEY_VAL_PREFIX = "injvaloperpub";
 export declare const BECH32_PUBKEY_CONS_PREFIX = "injvalconspub";
 export declare const BECH32_ADDR_ACC_PREFIX = "dym";

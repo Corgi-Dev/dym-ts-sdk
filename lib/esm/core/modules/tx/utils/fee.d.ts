@@ -1,3 +1,6 @@
+export declare const DEFAULT_GAS_LIMIT = 250000;
+export declare const DEFAULT_IBC_GAS_LIMIT = 250000;
+export declare const DEFAULT_GAS_PRICE = 20000000000;
 export declare const getStdFeeForToken: (token?: {
     denom: string;
     decimals: number;

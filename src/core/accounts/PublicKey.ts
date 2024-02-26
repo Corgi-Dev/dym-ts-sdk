@@ -1,5 +1,4 @@
-import { BECH32_PUBKEY_ACC_PREFIX, decompressPubKey } from "../../utils";
-import { bech32 } from "bech32";
+import { bech32 } from "bech32-2";
 import { toBuffer } from "ethereumjs-util";
 import secp256k1 from "secp256k1";
 import { Address } from "./Address";
@@ -9,6 +8,24 @@ import {
   InjectiveCryptoV1Beta1Ethsecp256k1Keys,
 } from "@injectivelabs/core-proto-ts";
 
+function decompressPubKey(startsWith02Or03: string) {
+  // if already decompressed an not has trailing 04
+  const testBuffer = Buffer.from(startsWith02Or03, 'hex');
+
+  if (testBuffer.length === 64) startsWith02Or03 = `04${startsWith02Or03}`;
+
+  const unit8 = new Uint8Array(Buffer.from(startsWith02Or03, 'hex'));
+  const compressed = secp256k1.publicKeyConvert(unit8, false);
+
+  let decompressed = Buffer.from(compressed).toString('hex');
+
+  // remove trailing 04
+  decompressed = decompressed.substring(2);
+
+  return decompressed;
+}
+
+export const BECH32_PUBKEY_ACC_PREFIX = "injpub";
 /**
  * @category Crypto Utility Classes
  */
@@ -54,7 +71,6 @@ export class PublicKey {
   public toHex(): string {
     return Buffer.from(this.toPubKeyBytes()).toString("hex");
   }
-
   public toBech32(): string {
     return bech32.encode(BECH32_PUBKEY_ACC_PREFIX, this.key);
   }

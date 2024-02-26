@@ -7,23 +7,24 @@ import {
   InjectiveCryptoV1Beta1Ethsecp256k1Keys,
 } from '@injectivelabs/core-proto-ts';
 import { Address } from './address';
+import { decompressPubKey } from '../utils';
 
-export function decompressPubKey(startsWith02Or03: string) {
-  // if already decompressed an not has trailing 04
-  const testBuffer = Buffer.from(startsWith02Or03, 'hex');
+// export function decompressPubKey(startsWith02Or03: string) {
+//   // if already decompressed an not has trailing 04
+//   const testBuffer = Buffer.from(startsWith02Or03, 'hex');
 
-  if (testBuffer.length === 64) startsWith02Or03 = `04${startsWith02Or03}`;
+//   if (testBuffer.length === 64) startsWith02Or03 = `04${startsWith02Or03}`;
 
-  const unit8 = new Uint8Array(Buffer.from(startsWith02Or03, 'hex'));
-  const compressed = secp256k1.publicKeyConvert(unit8, false);
+//   const unit8 = new Uint8Array(Buffer.from(startsWith02Or03, 'hex'));
+//   const compressed = secp256k1.publicKeyConvert(unit8, false);
 
-  let decompressed = Buffer.from(compressed).toString('hex');
+//   let decompressed = Buffer.from(compressed).toString('hex');
 
-  // remove trailing 04
-  decompressed = decompressed.substring(2);
+//   // remove trailing 04
+//   decompressed = decompressed.substring(2);
 
-  return decompressed;
-}
+//   return decompressed;
+// }
 
 /**
  * @category Crypto Utility Classes

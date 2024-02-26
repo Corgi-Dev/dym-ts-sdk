@@ -1,5 +1,6 @@
 import { Address } from "./Address";
 import { GoogleProtobufAny, InjectiveCryptoV1Beta1Ethsecp256k1Keys } from "@injectivelabs/core-proto-ts";
+export declare const BECH32_PUBKEY_ACC_PREFIX = "injpub";
 /**
  * @category Crypto Utility Classes
  */

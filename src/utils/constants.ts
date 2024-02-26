@@ -1,7 +1,6 @@
 import { Network } from "@injectivelabs/networks";
 import { AddressPrefix } from "..";
 
-export const BECH32_PUBKEY_ACC_PREFIX = "injpub";
 export const BECH32_PUBKEY_VAL_PREFIX = "injvaloperpub";
 export const BECH32_PUBKEY_CONS_PREFIX = "injvalconspub";
 
