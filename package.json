@@ -19,18 +19,18 @@
   },
   "dependencies": {
     "@cosmjs/crypto": "0.30.0",
+    "@cosmjs/launchpad": "0.27.1",
     "@cosmjs/proto-signing": "0.28.4",
     "@cosmjs/stargate": "0.28.4",
-    "@cosmjs/launchpad": "0.27.1",
     "@injectivelabs/sdk-ts": "1.14.5",
     "@metamask/eth-sig-util": "^7.0.1",
     "@tendermint/sig": "^0.6.0",
     "bech32-2": "npm:bech32@^2.0.0",
     "cosmjs-types": "0.5.1",
     "libsodium-wrappers-sumo": "./lib/libsodium-wrappers-sumo.js"
-
   },
   "devDependencies": {
+    "@types/create-hash": "^1.2.6",
     "typescript": "^5.3.3"
   },
   "directories": {

@@ -14,7 +14,7 @@ export declare class IndexerGrpcExplorerApi extends BaseGrpcConsumer {
         type?: string;
     }): Promise<{
         txs: import("../types").Transaction[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     }>;
     fetchValidator(validatorAddress: string): Promise<import("../types").ExplorerValidator>;
     fetchValidatorUptime(validatorAddress: string): Promise<import("../types").ValidatorUptime[]>;

@@ -8,7 +8,7 @@ export declare class ChainGrpcAuthTransformer {
     static grpcAccountToAccount(ethAccount: GoogleProtobufAny.Any): Account;
     static accountResponseToAccount(response: CosmosAuthV1Beta1Query.QueryAccountResponse): Account;
     static accountsResponseToAccounts(response: CosmosAuthV1Beta1Query.QueryAccountsResponse): {
-        pagination: import("../../..").Pagination;
+        pagination: import("../../../types").Pagination;
         accounts: Account[];
     };
 }

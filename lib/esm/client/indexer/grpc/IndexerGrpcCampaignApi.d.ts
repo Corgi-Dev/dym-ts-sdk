@@ -17,7 +17,7 @@ export declare class IndexerGrpcCampaignApi extends BaseGrpcConsumer {
     }): Promise<{
         campaign: import("../types").Campaign | undefined;
         users: import("../types").CampaignUser[];
-        paging: import("../../..").ExchangePagination;
+        paging: import("../../../types").ExchangePagination;
     }>;
     fetchRound({ roundId, toRoundId, accountAddress, contractAddress, }: {
         roundId?: string;
@@ -36,7 +36,7 @@ export declare class IndexerGrpcCampaignApi extends BaseGrpcConsumer {
         campaignContract: string;
     }): Promise<{
         guilds: import("../types").Guild[];
-        paging: import("../../..").ExchangePagination;
+        paging: import("../../../types").ExchangePagination;
         updatedAt: number;
         summary: import("../types").GuildCampaignSummary | undefined;
     }>;
@@ -55,7 +55,7 @@ export declare class IndexerGrpcCampaignApi extends BaseGrpcConsumer {
         includeGuildInfo: boolean;
     }): Promise<{
         members: import("../types").GuildMember[];
-        paging: import("../../..").ExchangePagination;
+        paging: import("../../../types").ExchangePagination;
         guildInfo: import("../types").Guild | undefined;
     }>;
 }

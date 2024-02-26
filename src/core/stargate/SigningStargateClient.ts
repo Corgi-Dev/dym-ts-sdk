@@ -387,9 +387,7 @@ export class EthSigningStargateClient extends EthStargateClient {
       [{ pubkey, sequence: signedSequence }],
       signed.fee.amount,
       signedGasLimit,
-      signed.fee.granter,
-      signed.fee.payer,
-      signMode
+      127,
     );
     return TxRaw.fromPartial({
       bodyBytes: signedTxBodyBytes,
@@ -435,8 +433,7 @@ export class EthSigningStargateClient extends EthStargateClient {
       [{ pubkey, sequence }],
       fee.amount,
       gasLimit,
-      "",
-      ""
+      127
     );
     const signDoc = makeSignDoc(
       txBodyBytes,

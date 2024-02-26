@@ -13,32 +13,32 @@ export declare class IndexerGrpcDerivativeTransformer {
     static marketsResponseToMarkets(response: InjectiveDerivativeExchangeRpc.MarketsResponse): DerivativeMarket[];
     static ordersResponseToOrders(response: InjectiveDerivativeExchangeRpc.OrdersResponse): {
         orders: DerivativeLimitOrder[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static orderHistoryResponseToOrderHistory(response: InjectiveDerivativeExchangeRpc.OrdersHistoryResponse): {
         orderHistory: DerivativeOrderHistory[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static positionsResponseToPositions(response: InjectiveDerivativeExchangeRpc.PositionsResponse): {
         positions: Position[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static positionsV2ResponseToPositionsV2(response: InjectiveDerivativeExchangeRpc.PositionsV2Response): {
         positions: PositionV2[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static tradesResponseToTrades(response: InjectiveDerivativeExchangeRpc.TradesResponse): {
         trades: DerivativeTrade[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static subaccountTradesListResponseToSubaccountTradesList(response: InjectiveDerivativeExchangeRpc.SubaccountTradesListResponse): DerivativeTrade[];
     static fundingPaymentsResponseToFundingPayments(response: InjectiveDerivativeExchangeRpc.FundingPaymentsResponse): {
         fundingPayments: FundingPayment[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static fundingRatesResponseToFundingRates(response: InjectiveDerivativeExchangeRpc.FundingRatesResponse): {
         fundingRates: FundingRate[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static orderbookV2ResponseToOrderbookV2(response: InjectiveDerivativeExchangeRpc.OrderbookV2Response): OrderbookWithSequence;
     static orderbooksV2ResponseToOrderbooksV2(response: InjectiveDerivativeExchangeRpc.OrderbooksV2Response): {
@@ -48,7 +48,7 @@ export declare class IndexerGrpcDerivativeTransformer {
     static binaryOptionsMarketResponseToBinaryOptionsMarket(response: InjectiveDerivativeExchangeRpc.BinaryOptionsMarketResponse): BinaryOptionsMarket;
     static binaryOptionsMarketResponseWithPaginationToBinaryOptionsMarket(response: InjectiveDerivativeExchangeRpc.BinaryOptionsMarketsResponse): {
         markets: BinaryOptionsMarket[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static binaryOptionsMarketsResponseToBinaryOptionsMarkets(response: InjectiveDerivativeExchangeRpc.BinaryOptionsMarketsResponse): BinaryOptionsMarket[];
     static grpcBinaryOptionsMarketToBinaryOptionsMarket(market: GrpcBinaryOptionsMarketInfo): BinaryOptionsMarket;

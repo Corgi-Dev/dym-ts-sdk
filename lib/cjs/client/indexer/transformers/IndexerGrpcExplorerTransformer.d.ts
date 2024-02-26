@@ -7,7 +7,7 @@ export declare class IndexerGrpcExplorerTransformer {
     static getTxByTxHashResponseToTx(tx: InjectiveExplorerRpc.GetTxByTxHashResponse): Transaction;
     static getAccountTxsResponseToAccountTxs(response: InjectiveExplorerRpc.GetAccountTxsResponse): {
         txs: Transaction[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static getValidatorUptimeResponseToValidatorUptime(response: InjectiveExplorerRpc.GetValidatorUptimeResponse): ValidatorUptime[];
     static getPeggyDepositTxsResponseToPeggyDepositTxs(response: InjectiveExplorerRpc.GetPeggyDepositTxsResponse): PeggyDepositTx[];

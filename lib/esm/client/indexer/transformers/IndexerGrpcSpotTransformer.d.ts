@@ -10,15 +10,15 @@ export declare class IndexerGrpcSpotTransformer {
     static marketsResponseToMarkets(response: InjectiveSpotExchangeRpc.MarketsResponse): SpotMarket[];
     static ordersResponseToOrders(response: InjectiveSpotExchangeRpc.OrdersResponse): {
         orders: SpotLimitOrder[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static orderHistoryResponseToOrderHistory(response: InjectiveSpotExchangeRpc.OrdersHistoryResponse): {
         orderHistory: SpotOrderHistory[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static tradesResponseToTrades(response: InjectiveSpotExchangeRpc.TradesResponse): {
         trades: SpotTrade[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static subaccountTradesListResponseToTradesList(response: InjectiveSpotExchangeRpc.SubaccountTradesListResponse): SpotTrade[];
     static orderbookV2ResponseToOrderbookV2(response: InjectiveSpotExchangeRpc.OrderbookV2Response): OrderbookWithSequence;
@@ -47,7 +47,7 @@ export declare class IndexerGrpcSpotTransformer {
     static grpcTradesToTrades(trades: GrpcSpotTrade[]): SpotTrade[];
     static grpcAtomicSwapHistoryListToAtomicSwapHistoryList(response: InjectiveSpotExchangeRpc.AtomicSwapHistoryResponse): {
         swapHistory: AtomicSwap[];
-        pagination: import("../../..").ExchangePagination;
+        pagination: import("../../../types").ExchangePagination;
     };
     static grpcAtomicSwapHistoryToAtomicSwapHistory(swapHistory: GrpcAtomicSwap): AtomicSwap;
 }

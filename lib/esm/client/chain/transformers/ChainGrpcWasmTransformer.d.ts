@@ -11,11 +11,11 @@ export declare class ChainGrpcWasmTransformer {
     static grpcCodeInfoResponseToCodeInfoResponse(info: GrpcCodeInfoResponse): CodeInfoResponse;
     static contactHistoryResponseToContractHistory(response: CosmwasmWasmV1Query.QueryContractHistoryResponse): {
         entriesList: ContractCodeHistoryEntry[];
-        pagination: import("../../..").Pagination;
+        pagination: import("../../../types").Pagination;
     };
     static contractCodesResponseToContractCodes(response: CosmwasmWasmV1Query.QueryCodesResponse): {
         codeInfosList: CodeInfoResponse[];
-        pagination: import("../../..").Pagination;
+        pagination: import("../../../types").Pagination;
     };
     static contractCodeResponseToContractCode(response: CosmwasmWasmV1Query.QueryCodeResponse): {
         codeInfo: CodeInfoResponse;
@@ -23,6 +23,6 @@ export declare class ChainGrpcWasmTransformer {
     };
     static contractByCodeResponseToContractByCode(response: CosmwasmWasmV1Query.QueryContractsByCodeResponse): {
         contractsList: string[];
-        pagination: import("../../..").Pagination;
+        pagination: import("../../../types").Pagination;
     };
 }

@@ -14,14 +14,14 @@ export declare class ChainGrpcAuthZTransformer {
         expiration: Date | undefined;
     };
     static grpcGrantsToGrants(response: CosmosAuthzV1Beta1Query.QueryGrantsResponse): {
-        pagination: import("../../..").Pagination;
+        pagination: import("../../../types").Pagination;
         grants: {
             authorization: string;
             expiration: Date | undefined;
         }[];
     };
     static grpcGranteeGrantsToGranteeGrants(response: CosmosAuthzV1Beta1Query.QueryGranteeGrantsResponse): {
-        pagination: import("../../..").Pagination;
+        pagination: import("../../../types").Pagination;
         grants: {
             granter: string;
             grantee: string;
@@ -30,7 +30,7 @@ export declare class ChainGrpcAuthZTransformer {
         }[];
     };
     static grpcGranterGrantsToGranterGrants(response: CosmosAuthzV1Beta1Query.QueryGranterGrantsResponse): {
-        pagination: import("../../..").Pagination;
+        pagination: import("../../../types").Pagination;
         grants: {
             granter: string;
             grantee: string;
