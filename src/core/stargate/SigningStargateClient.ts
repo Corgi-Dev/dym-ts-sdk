@@ -1,8 +1,3 @@
-import {
-  encodeSecp256k1Pubkey,
-  makeSignDoc as makeSignDocAmino,
-  StdFee,
-} from "@cosmjs/amino";
 import { fromBase64 } from "@cosmjs/encoding";
 import { Int53, Uint53 } from "@cosmjs/math";
 import {
@@ -55,6 +50,7 @@ import { EthStargateClient } from "./StargateClient";
 import { getPublicKey } from "../modules";
 import { startWithChainIdPrefix } from "../../utils/check";
 import { injectiveAccountParser } from "../accounts";
+import { StdFee, encodeSecp256k1Pubkey } from "@cosmjs/launchpad";
 
 /**
  * Signing information for a single signer that is not included in the transaction.
@@ -447,8 +443,8 @@ export class EthSigningStargateClient extends EthStargateClient {
       [{ pubkey, sequence }],
       fee.amount,
       gasLimit,
-      '',
-      '',
+      "",
+      ""
     );
     const signDoc = makeSignDoc(
       txBodyBytes,
@@ -466,4 +462,36 @@ export class EthSigningStargateClient extends EthStargateClient {
       signatures: [fromBase64(signature.signature)],
     });
   }
+}
+export function makeSignDocAmino(
+  msgs: readonly AminoMsg[],
+  fee: StdFee,
+  chainId: string,
+  memo: string | undefined,
+  accountNumber: number | string,
+  sequence: number | string,
+  timeoutHeight?: bigint
+): StdSignDoc {
+  return {
+    chain_id: chainId,
+    account_number: accountNumber.toString(),
+    sequence: sequence.toString(),
+    fee,
+    msgs,
+    memo: memo || "",
+    ...(timeoutHeight && { timeout_height: timeoutHeight.toString() }),
+  };
+}
+
+export interface AminoMsg {
+  readonly type: string;
+  readonly value: any;
+}
+export interface StdSignDoc {
+  readonly chain_id: string;
+  readonly account_number: string;
+  readonly sequence: string;
+  readonly fee: StdFee;
+  readonly msgs: readonly AminoMsg[];
+  readonly memo: string;
 }

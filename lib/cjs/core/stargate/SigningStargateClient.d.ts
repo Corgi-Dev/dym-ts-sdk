@@ -1,4 +1,3 @@
-import { StdFee } from "@cosmjs/amino";
 import { EncodeObject, OfflineSigner, Registry } from "@cosmjs/proto-signing";
 import { HttpEndpoint } from "./tendermint-rpc/build";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
@@ -8,6 +7,7 @@ import { AminoConverters, AminoTypes } from "@cosmjs/stargate";
 import { GasPrice } from "@cosmjs/stargate";
 import { DeliverTxResponse, StargateClientOptions } from "@cosmjs/stargate";
 import { EthStargateClient } from "./StargateClient";
+import { StdFee } from "@cosmjs/launchpad";
 /**
  * Signing information for a single signer that is not included in the transaction.
  *
@@ -78,4 +78,17 @@ export declare class EthSigningStargateClient extends EthStargateClient {
     sign(signerAddress: string, messages: readonly EncodeObject[], fee: StdFee, memo: string, explicitSignerData?: SignerData): Promise<TxRaw>;
     protected signAmino(signerAddress: string, messages: readonly EncodeObject[], fee: StdFee, memo: string, { accountNumber, sequence, chainId }: SignerData): Promise<TxRaw>;
     protected signDirect(signerAddress: string, messages: readonly EncodeObject[], fee: StdFee, memo: string, { accountNumber, sequence, chainId }: SignerData): Promise<TxRaw>;
+}
+export declare function makeSignDocAmino(msgs: readonly AminoMsg[], fee: StdFee, chainId: string, memo: string | undefined, accountNumber: number | string, sequence: number | string, timeoutHeight?: bigint): StdSignDoc;
+export interface AminoMsg {
+    readonly type: string;
+    readonly value: any;
+}
+export interface StdSignDoc {
+    readonly chain_id: string;
+    readonly account_number: string;
+    readonly sequence: string;
+    readonly fee: StdFee;
+    readonly msgs: readonly AminoMsg[];
+    readonly memo: string;
 }
