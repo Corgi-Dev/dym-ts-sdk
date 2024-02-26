@@ -10,7 +10,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SigningStargateClient = exports.createDefaultAminoConverters = void 0;
-const amino_1 = require("@cosmjs/amino");
 const encoding_1 = require("@cosmjs/encoding");
 const math_1 = require("@cosmjs/math");
 const proto_signing_1 = require("@cosmjs/proto-signing");
