@@ -1,5 +1,5 @@
+import { StdFee } from "@cosmjs/stargate";
 import { Msgs } from "../../msgs";
-import { StdFee } from "@cosmjs/amino";
 import { CosmosTxV1Beta1Tx, CosmosTxV1Beta1Service, CosmosTxSigningV1Beta1Signing, GoogleProtobufAny } from "@injectivelabs/core-proto-ts";
 export interface TxClientBroadcastOptions {
     mode?: CosmosTxV1Beta1Service.BroadcastMode;

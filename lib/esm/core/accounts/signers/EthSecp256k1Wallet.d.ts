@@ -1,6 +1,5 @@
-import { AminoSignResponse, StdSignDoc } from "@cosmjs/amino";
 import { AccountData, OfflineAminoSigner } from "./types/amino-signer";
-import { Secp256k1Wallet } from "@cosmjs/launchpad";
+import { AminoSignResponse, Secp256k1Wallet, StdSignDoc } from "@cosmjs/launchpad";
 export declare class EthSecp256k1Wallet implements OfflineAminoSigner {
     /**
      * Creates a EthSecp256k1Wallet from the given private key

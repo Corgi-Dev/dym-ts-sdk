@@ -1,5 +1,5 @@
+import { StdFee } from "@cosmjs/stargate";
 import { Msgs } from "../../msgs";
-import { StdFee } from "@cosmjs/amino";
 import {
   CosmosTxV1Beta1Tx,
   CosmosTxV1Beta1Service,

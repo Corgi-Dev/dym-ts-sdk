@@ -1,6 +1,5 @@
 "use strict";
 // Note: all exports in this module are publicly available via
-// `import { tendermint37 } from "@cosmjs/tendermint-rpc"`
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Tendermint37Client = exports.VoteType = exports.broadcastTxSyncSuccess = exports.broadcastTxCommitSuccess = exports.SubscriptionEventType = exports.Method = void 0;
 var requests_1 = require("./requests");
