@@ -1,35 +1,44 @@
 {
-  "name": "dym_corgi_sdk",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@mrtruongleo/dym-ts-sdk",
+  "version": "1.0.8",
+  "description": "Dymension sdk typescript",
+  "contributors": [
+    "mrtruongleo"
+  ],
+  "main": "lib/esm/index.js",
+  "module": "lib/cjs/index.js",
+  "types": "lib/esm/index.d.ts",
+  "files": [
+    "lib/",
+    "*.md"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -p ."
+    "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "clean": "rm -rf lib",
+    "prepublishOnly": "npm run build"
   },
-  "engines": {
-    "node": "16.13.2",
-    "npm": "8.1.2"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@cosmjs/crypto": "^0.32.2",
-    "@cosmjs/launchpad": "^0.27.1",
-    "@cosmjs/proto-signing": "^0.32.2",
-    "@cosmjs/stargate": "^0.32.2",
-    "@ethersproject/bytes": "^5.7.0",
-    "@injectivelabs/core-proto-ts": "^0.0.21",
-    "@injectivelabs/ts-types": "^1.14.5",
-    "@injectivelabs/utils": "^1.14.5",
-    "@metamask/eth-sig-util": "^7.0.1",
-    "@tendermint/sig": "^0.6.0",
-    "bech32-2": "npm:bech32@2.0.0",
-    "cosmjs-types": "^0.9.0",
-    "create-hash": "^1.2.0",
-    "ethereumjs-util": "^7.1.5",
-    "keccak256": "^1.0.6",
-    "secp256k1": "^5.0.0"
-  }
+    "@injectivelabs/sdk-ts": "1.14.5",
+    "@cosmjs/launchpad": "0.27.1",
+    "bech32-2": "npm:bech32@^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrtruongleo/dym-ts-sdk.git"
+  },
+  "keywords": [
+    "dym"
+  ],
+  "author": "mrtruongleo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrtruongleo/dym-ts-sdk/issues"
+  },
+  "homepage": "https://github.com/mrtruongleo/dym-ts-sdk#readme"
 }
