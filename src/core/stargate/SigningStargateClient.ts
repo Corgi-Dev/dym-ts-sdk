@@ -35,11 +35,7 @@ import {
   createAuthzAminoConverters,
   createBankAminoConverters,
   createDistributionAminoConverters,
-  createFeegrantAminoConverters,
   createGovAminoConverters,
-  createIbcAminoConverters,
-  createStakingAminoConverters,
-  createVestingAminoConverters,
 } from "@cosmjs/stargate";
 import {
   DeliverTxResponse,
@@ -77,10 +73,6 @@ export function createDefaultAminoConverters(): AminoConverters {
     ...createBankAminoConverters(),
     ...createDistributionAminoConverters(),
     ...createGovAminoConverters(),
-    ...createStakingAminoConverters(),
-    ...createIbcAminoConverters(),
-    ...createFeegrantAminoConverters(),
-    ...createVestingAminoConverters(),
   };
 }
 
