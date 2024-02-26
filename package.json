@@ -24,7 +24,8 @@
     "@metamask/eth-sig-util": "^7.0.1",
     "@tendermint/sig": "^0.6.0",
     "bech32-2": "npm:bech32@^2.0.0",
-    "cosmjs-types": "^0.9.0"
+    "cosmjs-types": "^0.9.0",
+    "libsodium-wrappers-sumo": "./lib/libsodium-wrappers-sumo.js"
   },
   "devDependencies": {
     "typescript": "^5.3.3"
